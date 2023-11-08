@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>サイコロゲーム</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>サイコロ</h1>
+          </section>
+
+    <button id="button-saikoro">サイコロを振る</button>
+
+    <section class="result_section" id="result">
+        <p>進む</p>
+      </section>
+    
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+     
+
+
+<script>
+
+$("#button-saikoro").on("click", function () {
+ const randomNumber1= Math.floor(Math.random()*6);
+  if(randomNumber1 === 0){
+    $("#result").text("1進む");
+  } else if(randomNumber1 === 1){
+    $("#result").text("2進む");
+  } else if(randomNumber1 === 2){
+    $("#result").text("3進む");
+  } else if(randomNumber1 === 3){
+    $("#result").text("4進む");
+  } else if(randomNumber1 === 4){
+    $("#result").text("5進む");
+  } else if(randomNumber1 === 5){
+    $("#result").text("6進む");
+  }
+});
+
+
+
+</script>
+
+
+
+</body>
+</html>

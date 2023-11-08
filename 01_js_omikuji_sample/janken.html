@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>じゃんけん</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet" />
+  <link rel="stylesheet" href="css/janken.css">
+</head>
+
+<style>
+  #result{
+    color: brown;
+  }
+</style>
+
+<body>
+  <main>
+
+
+    <section>
+      <h1>じゃんけん</h1>
+    </section>
+
+    <section class="cpuchoice_section" id="cpuchoice">
+      <p>コンピュータの手は？？</p>
+    </section>
+
+    <section class="result_section" id="result">
+      <p>勝敗は？？</p>
+    </section>
+
+    <section>
+      <button id="button-g">グー</button>
+      <button id="button-c">チョキ</button>
+      <button id="button-p">パー</button>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      
+  </main>
+
+  <script>
+
+$("#button-g").on("click",function(){
+  // 乱数処理
+const r = Math.ceil(Math.random()*3);
+
+// if分岐処理
+let view =""
+if(r===1){
+  view = 'あいこ';
+  $("#cpuchoice").text('グー')
+  $("#result").text('あいこ'),fadeIn(2000)
+}
+if(r===2){
+  view = '勝ち';
+  $("#cpuchoice").text('チョキ')
+  $("#result").text('勝ち'),fadeIn(2000)
+}
+if(r===3){
+  view = '負け';
+  $("#cpuchoice").text('パー')
+  $("#result").text('負け'),fadeIn(2000)
+}
+});
+
+
+
+
+// $("#button-g").on("click", function () {
+//  const randomNumber1= Math.floor(Math.random()*3);
+//   if(randomNumber1 === 0){
+//     $("#cpuchoice").text("グー");
+//     $("#result").text("あいこ");
+//   } else if(randomNumber1 === 1){
+//     $("#cpuchoice").text("パー");
+//     $("#result").text("負け");
+//   } else if(randomNumber1 ===2){
+//     $("#cpuchoice").text("チョキ");
+//     $("#result").text("勝ち");
+//   }
+// });
+
+// $("#button-c").on("click", function () {
+//  const randomNumber1= Math.floor(Math.random()*3);
+//   if(randomNumber1 === 0){
+//     $("#cpuchoice").text("グー");
+//     $("#result").text("負け");
+//   } else if(randomNumber1 === 1){
+//     $("#cpuchoice").text("パー");
+//     $("#result").text("勝ち");
+//   } else if(randomNumber1 ===2){
+//     $("#cpuchoice").text("チョキ");
+//     $("#result").text("あいこ");
+//   }
+// });
+
+// $("#button-p").on("click", function () {
+//  const randomNumber1= Math.floor(Math.random()*3);
+//   if(randomNumber1 === 0){
+//     $("#cpuchoice").text("グー");
+//     $("#result").text("勝ち");
+//   } else if(randomNumber1 === 1){
+//     $("#cpuchoice").text("パー");
+//     $("#result").text("あいこ");
+//   } else if(randomNumber1 ===2){
+//     $("#cpuchoice").text("チョキ");
+//     $("#result").text("負け");
+//   }
+// });
+
+
+
+//グー
+// $("#button-g").on("click", function () {
+//   const mychoice = 0
+//   const cpuchoice_r = getRandomChoice();
+//   judge(mychoice, cpuchoice_r);
+// });
+// console.log(button-g);
+
+// function getRandomChoice(){
+//   const min = 0;
+//   const max = 2;
+//   return Math.floor(Math.random()*(max - min + 1)) + min;
+// }
+
+// function judge(mychoice, cpuchoice_r){
+//   if(mychoice === 0 && cpuchoice_r === 1){
+//     $("#cpuchoice").text("グー");
+//     $("#result").text("あいこ");
+//   } else if(mychoice === 0 && cpuchoice_r === 2){
+//     $("#cpuchoice").text("チョキ");
+//     $("#result").text("勝ち");
+//   } else{
+//     $("#cpuchoice").text("パー");
+//     $("#result").text("負け");
+//   }
+// };
+
+ // //チョキ
+//  $("#button-c").on("click", function () {
+//    const mychoice = 1
+//    const cpuchoice_r = getRandomChoice2();
+//    judge2(mychoice, cpuchoice_r);
+//  });
+
+
+//  function getRandomChoice2(){
+//   const min = 0;
+//   const max = 2;
+//   return Math.floor(Math.random()*(max - min + 1)) + min;
+// }
+
+//  function judge2(mychoice, cpuchoice_r){
+//    if(mychoice === 1 && cpuchoice_r === 1){
+//      $("#cpuchoice").text("チョキ");
+//      $("#result").text("あいこ");
+//    } else if(mychoice === 1 && cpuchoice_r === 2){
+//      $("#cpuchoice").text("パー");
+//      $("#result").text("勝ち");
+//    }  else{
+//      $("#cpuchoice").text("グー");
+//      $("#result").text("負け");
+//    }
+//  };
+
+// //パー
+// $("#button-p").on("click", function () {
+//   const mychoice = 2
+//   const cpuchoice_r = getRandomChoice();
+//   judge(mychoice, cpuchoice_r);
+// });
+// console.log(button-p);
+
+  </script>
+
+ 
+</body>
+
+</html>

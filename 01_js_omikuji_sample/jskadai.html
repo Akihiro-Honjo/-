@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jakadai.css">
+    <title>チーズアカデミー入学試験</title>
+</head>
+<body>
+
+  <div id="quiz-container">
+    <h1>チーズアカデミー　入学試験</h1>
+    <p class="time">試験時間　30秒</p>
+
+
+    <h2 id="question1">問題（国語）: 「早急」の読みは？</h2>
+    <div id="options1">
+      <button class="choice1">A. そうきゅう</button>
+      <button class="choice1">B. はやいそ</button>
+      <button class="choice1">C. はやきゅう</button>
+      <button class="choice1">D. さっきゅう</button>
+    </div>
+    <p id="result1"></p>
+
+    <h2 id="question2">問題（社会）: 江戸幕府を開いた人は？</h2>
+    <div id="options2">
+      <button class="choice2">A. 岸田文雄</button>
+      <button class="choice2">B. 徳川家康</button>
+      <button class="choice2">C. 伊藤博文</button>
+      <button class="choice2">D. 聖徳太子</button>
+    </div>
+    <p id="result2"></p>
+ 
+  <h2 id="question3">問題（理科）: 太陽の光を最も吸収しやすい色は？</h2>
+  <div id="options3">
+    <button class="choice3">A.白 </button>
+    <button class="choice3">B.黄色 </button>
+    <button class="choice3">C.黒 </button>
+    <button class="choice3">D.赤 </button>
+  </div>
+  <p id="result3"></p>
+
+
+<h2 id="question4">問題（算数）: 5+5は？</h2>
+<div id="options4">
+  <button class="choice4">A.10</button>
+  <button class="choice4">B.25 </button>
+  <button class="choice4">C.0 </button>
+  <button class="choice4">D.1 </button>
+</div>
+<p id="result4"></p>
+
+
+<h2 id="question5">問題（英語）: cheeseは日本語で？</h2>
+<div id="options5">
+  <button class="choice5">A.バター</button>
+  <button class="choice5">B.チーズ</button>
+  <button class="choice5">C.パン</button>
+  <button class="choice5">D.ケーキ</button>
+</div>
+<p id="result5"></p>
+</div>
+
+<div class="result_box">
+<button class="btn">結果発表</button>
+<p id="echo"></p>
+</div>
+
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script>
+function timerCallback(){
+ alert("試験時間終了です。")
+}
+setTimeout(timerCallback,30000);
+
+
+
+
+let score = 0;
+
+
+
+
+// 1問名（国語）
+  const correctAnswer1 = 'D';
+  const correctAnswer1a='A';
+
+$('.choice1').on('click', function() {{
+  this.style.backgroundColor = "#3fb811";
+}
+  const userAnswer = $(this).text().charAt(0);
+  const resultElement = $('#result1');
+
+  if (userAnswer === correctAnswer1) {
+    resultElement.text('正解です！');
+    score++;
+  } else if(userAnswer === correctAnswer1a){
+  resultElement.text('おしい！')
+  }else {
+    resultElement.text('残念！');
+    score:0;
+  }
+});
+
+// 2問名（社会）
+const correctAnswer2 = 'B';
+
+$('.choice2').on('click', function() {{
+  this.style.backgroundColor = "#3fb811";
+}
+  const userAnswer = $(this).text().charAt(0);
+  const resultElement = $('#result2');
+
+  if (userAnswer === correctAnswer2) {
+    resultElement.text('正解です！');
+    score++;
+  } else {
+    resultElement.text('残念！');
+  }
+});
+   
+// 3問名（理科）
+const correctAnswer3 = 'C';
+
+$('.choice3').on('click', function() {{
+  this.style.backgroundColor = "#3fb811";
+}
+  const userAnswer = $(this).text().charAt(0);
+  const resultElement = $('#result3');
+
+  if (userAnswer === correctAnswer3) {
+    resultElement.text('正解です！');
+    score++;
+  } else {
+    resultElement.text('残念！');
+  }
+});
+
+// 4問名（数学）
+const correctAnswer4 = 'A';
+
+$('.choice4').on('click', function() {{
+  this.style.backgroundColor = "#3fb811";
+}
+  const userAnswer = $(this).text().charAt(0);
+  const resultElement = $('#result4');
+
+  if (userAnswer === correctAnswer4) {
+    resultElement.text('正解です！');
+    score++;
+  } else {
+    resultElement.text('残念！');
+  }
+});
+
+// 5問名（英語）
+const correctAnswer5 = 'B';
+
+$('.choice5').on('click', function() {{
+  this.style.backgroundColor = "#3fb811";
+}
+  const userAnswer = $(this).text().charAt(0);
+  const resultElement = $('#result5');
+
+  if (userAnswer === correctAnswer5) {
+    resultElement.text('正解です！');
+    score++;
+  } else {
+    resultElement.text('残念！');
+  }
+});
+
+$(".btn").on("click",function(){
+  if(score === 5) {
+    $("#echo").text(score + "点：満点！おめでとう！合格！")
+  } else if(score === 4) {
+    $("#echo").text(score + "点：なんとか合格！")
+  } else if(score === 3) {
+    $("#echo").text(score + "点：おしい！あともう１歩")
+  } else if(score ===2){
+    $("#echo").text(score + "点：残念")
+  } else if(score ===1){
+    $("#echo").text(score + "点：残念")
+  } else if(score ===0){
+    $("#echo").text(score + "点：もう１度勉強してください")
+  } 
+});
+
+        </script>
+
+
+</body>
+</html>

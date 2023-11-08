@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おみくじ</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main>
+
+    <section class="title_section">
+      <h1>おみくじ</h1>
+    </section>
+
+    <section class="result_section" id="result">
+      <p>結果は？？</p>
+    </section>
+
+    <section class="button_section">
+      <button id="button">おみくじをひく</button>
+    </section>
+
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+
+  const text1="G's"  // シングルクォートの場合\\で囲む
+  const text2="ACADEMY"
+  const sum1= text1 + text2;
+
+  //alert(sum1)
+
+  const number1= 100
+  const number2= 200
+  const sum2= number1 + number2;
+  //alert(sum2)
+ 
+  const number3= 3+4
+  const number4=5
+  const sum3= number3 + number4;
+  //alert(sum3)
+
+//1. 0～9
+  const randomNumber1= Math.floor(Math.random()*10);
+  //console.log(randomNumber1);
+
+//2. 1～9
+ const randomNumber2= Math.floor(Math.random()*9) + 1;
+ //console.log(randomNumber2);
+
+ //3. 5~10
+ const randomNumber3= Math.floor(Math.random()*6) + 5;
+ //console.log(randomNumber3);
+
+ //50~99
+ const min = 50;
+ const max = 99;
+ const randomNumber4= Math.floor(Math.random() * (max - min + 1)) + min;
+ //console.log(randomNumber4);
+
+
+
+ $("#button").on("click", function () {
+ const randomNumber= Math.floor(Math.random()*10);
+  console.log(randomNumber)
+    if (randomNumber=== 0) {
+    $("#result").text("大吉");
+  } else if (randomNumber <3){
+    $("#result").text("中吉");
+  } else if(randomNumber <6){
+    $("#result").text("小吉");
+  }　else if(randomNumber <8 ){
+    $("#result").text("凶");
+  } else if(randomNumber <10){
+    $("#result").text("大凶");
+  }
+  });
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おみくじ</title>
+</head>
+<body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <header>
+        <h1>おみくじ</h1>
+    </header>
+
+    <main>
+<button id="omikuji">おみくじを引く</button>
+
+<p id="echo"></p>
+
+    </main>
+<script>
+$("#omikuji").on("click",function(){
+    // 乱数（1～5）
+    const r = Math.ceil(Math.random()*5);
+
+
+    // if分岐処理
+let view = "";
+if(r==1){
+    view ='<img src="images/omikuji_daikichi.png">';
+}
+if(r==2){
+    view ='<img src="images/omikuji_chuukichi.png">';
+}
+if(r==3){
+    view ='<img src="images/omikuji_syoukichi.png">';
+}
+if(r==4){
+    view ='<img src="images/omikuji_kyou.png">';
+}
+if(r==5){
+    view ='<img src="images/omikuji_daikyou.png">';
+}
+
+
+    // 表示処理
+    $("#echo").html(view);
+    
+
+});
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

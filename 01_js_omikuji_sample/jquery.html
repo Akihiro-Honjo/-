@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a1">11111</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+// $("body").append("<div>ABC</div>");
+
+const link = '<a href="#">リンク</a>';
+$("#a1").text(link);
+$("#a1").css("color","#ff0000");
+$("#a1").css("background-color","#000000");
+// $("#a1").hide(3000);  //hide左上に消える　1000=1秒
+$("#a1").fadeOut(1000).fadeIn(1000);
+
+</script>
+
+
+</body>
+</html>

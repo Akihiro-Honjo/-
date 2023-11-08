@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="examination.css">
+    <title>チーズアカデミー入学試験</title>
+</head>
+<body>
+  <!-- <section id="app__title__screen">
+    <h1>チーズアカデミー　入学試験</h1>
+
+    <h2>試験内容</h2>
+    <p>国語、数学、英語、理科、社会の５教科です。<br>
+       試験時間は10分です。
+    </p>
+    
+    <div class="contact-form">
+
+        <form action="#" class="form">
+        <table>   
+          <tr><th>名前</th><td><input type="text"></td></tr>
+        </table>
+      
+        <div class="button">
+            <a href="#">試験開始</a>
+        </div>
+  </form>
+  </div>
+</section> -->
+<section id="app__title__screen">
+  <h1>チーズアカデミー入学試験</h1>
+  <p>国語、数学、英語、理科、社会の５科目です。<br>
+  試験時間は10分です。</p>
+
+  <form action="" id="form__yourname">
+      名前<input type=" text" id="yourname" value="">
+      <button id="yourname__registration__button" value="">試験開始</button>
+  </form>
+
+</section>
+
+  <!-- 国語 -->
+  <!-- 略称jにて表記 -->
+  <section id="content__wrapper_step1">
+  <h2>国語</h2>
+  <h3 id="j_question1">問題（国語）: 「早急」の読みは？</h3>
+  <div id="j_options1">
+    <button class="j_choice1">A. そうきゅう</button>
+    <button class="j_choice1">B. はやいそ</button>
+    <button class="j_choice1">C. はやきゅう</button>
+    <button class="j_choice1">D. さっきゅう</button>
+    <p id="answer_j1"></p>
+  </div>
+
+  <h3 id="j_question2">問題（数学）: 江戸幕府を開いた人は？</h3>
+  <div id="j_options2">
+    <button class="j_choice2">A. 岸田文雄</button>
+    <button class="j_choice2">B. 徳川家康</button>
+    <button class="j_choice2">C. 伊藤博文</button>
+    <button class="j_choice2">D. 聖徳太子</button>
+    <p id="answer_j2"></p>
+  </div>
+
+<h3 id="j_question3">問題（数学）: 太陽の光を最も吸収しやすい色は？</h3>
+<div id="j_options3">
+  <button class="j_choice3">A.白 </button>
+  <button class="j_choice3">B.黄色 </button>
+  <button class="j_choice3">C.黒 </button>
+  <button class="j_choice3">D.赤 </button>
+  <p id="answer_j3"></p>
+</div>
+
+<h3 id="j_question4">問題（数学）: 5+5は？</h3>
+<div id="j_options4">
+<button class="j_choice4">A.10</button>
+<button class="j_choice4">B.25 </button>
+<button class="j_choice4">C.0 </button>
+<button class="j_choice4">D.1 </button>
+<p id="answer_j4"></p>
+</div>
+
+<h3 id="j_question5">問題（数学）: cheeseは日本語で？</h3>
+<div id="j_options5">
+<button class="j_choice5">A.バター</button>
+<button class="j_choice5">B.チーズ</button>
+<button class="j_choice5">C.パン</button>
+<button class="j_choice5">D.ケーキ</button>
+<p id="answer_j5"></p>
+</div>
+
+</div>
+
+<div class="result_box">
+<button class="btn_m">次の問題へ</button>
+</div>
+</section>
+<!-- 国語終わり -->
+
+<!-- 数学始まり -->
+<!-- 略称ｍにて表記 -->
+<section id="content__wrapper_step2">
+  <h2>数学</h2>
+  <h3 id="m_question1">問題（国語）: 「早急」の読みは？</h3>
+  <div id="m_options1">
+    <button class="m_choice1">A. そうきゅう</button>
+    <button class="m_choice1">B. はやいそ</button>
+    <button class="m_choice1">C. はやきゅう</button>
+    <button class="m_choice1">D. さっきゅう</button>
+  </div>
+
+  <h3 id="m_question2">問題（数学）: 江戸幕府を開いた人は？</h3>
+  <div id="m_options2">
+    <button class="m_choice2">A. 岸田文雄</button>
+    <button class="m_choice2">B. 徳川家康</button>
+    <button class="m_choice2">C. 伊藤博文</button>
+    <button class="m_choice2">D. 聖徳太子</button>
+  </div>
+
+<h3 id="m_question3">問題（数学）: 太陽の光を最も吸収しやすい色は？</h3>
+<div id="m_options3">
+  <button class="m_choice3">A.白 </button>
+  <button class="m_choice3">B.黄色 </button>
+  <button class="m_choice3">C.黒 </button>
+  <button class="m_choice3">D.赤 </button>
+</div>
+
+<h3 id="m_question4">問題（数学）: 5+5は？</h3>
+<div id="m_options4">
+<button class="m_choice4">A.10</button>
+<button class="m_choice4">B.25 </button>
+<button class="m_choice4">C.0 </button>
+<button class="m_choice4">D.1 </button>
+</div>
+
+<h3 id="m_question5">問題（数学）: cheeseは日本語で？</h3>
+<div id="m_options5">
+<button class="m_choice5">A.バター</button>
+<button class="m_choice5">B.チーズ</button>
+<button class="m_choice5">C.パン</button>
+<button class="m_choice5">D.ケーキ</button>
+</div>
+
+</div>
+
+<div class="result_box">
+<button class="btn_e">次の問題へ</button>
+</div>
+</section>
+<!-- 数学終わり -->
+
+<!-- 英語始まり -->
+<!-- 略称eにて表記 -->
+<section id="content__wrapper_step3">
+  <h2>英語</h2>
+<h3 id="e_question1">問題（国語）: 「早急」の読みは？</h3>
+  <div id="e_options1">
+    <button class="e_choice1">A. そうきゅう</button>
+    <button class="e_choice1">B. はやいそ</button>
+    <button class="e_choice1">C. はやきゅう</button>
+    <button class="e_choice1">D. さっきゅう</button>
+  </div>
+
+  <h3 id="e_question2">問題（数学）: 江戸幕府を開いた人は？</h3>
+  <div id="e_options2">
+    <button class="e_choice2">A. 岸田文雄</button>
+    <button class="e_choice2">B. 徳川家康</button>
+    <button class="e_choice2">C. 伊藤博文</button>
+    <button class="e_choice2">D. 聖徳太子</button>
+  </div>
+
+<h3 id="e_question3">問題（数学）: 太陽の光を最も吸収しやすい色は？</h3>
+<div id="e_options3">
+  <button class="e_choice3">A.白 </button>
+  <button class="e_choice3">B.黄色 </button>
+  <button class="e_choice3">C.黒 </button>
+  <button class="e_choice3">D.赤 </button>
+</div>
+
+<h3 id="e_question4">問題（数学）: 5+5は？</h3>
+<div id="e_options4">
+<button class="e_choice4">A.10</button>
+<button class="e_choice4">B.25 </button>
+<button class="e_choice4">C.0 </button>
+<button class="e_choice4">D.1 </button>
+</div>
+
+<h3 id="e_question5">問題（数学）: cheeseは日本語で？</h3>
+<div id="e_options5">
+<button class="e_choice5">A.バター</button>
+<button class="e_choice5">B.チーズ</button>
+<button class="e_choice5">C.パン</button>
+<button class="e_choice5">D.ケーキ</button>
+</div>
+
+</div>
+
+<div class="result_box">
+<button class="btn_r">次の問題へ</button>
+</div>
+</section>
+<!-- 英語終わり -->
+
+<!-- 理科始まり -->
+<!-- 略称Rで -->
+<section id="content__wrapper_step4">
+  <h2>理科</h2>
+<h3 id="r_question1">問題（国語）: 「早急」の読みは？</h3>
+  <div id="r_options1">
+    <button class="r_choice1">A. そうきゅう</button>
+    <button class="r_choice1">B. はやいそ</button>
+    <button class="r_choice1">C. はやきゅう</button>
+    <button class="r_choice1">D. さっきゅう</button>
+  </div>
+
+  <h3 id="r_question2">問題（数学）: 江戸幕府を開いた人は？</h3>
+  <div id="r_options2">
+    <button class="r_choice2">A. 岸田文雄</button>
+    <button class="r_choice2">B. 徳川家康</button>
+    <button class="r_choice2">C. 伊藤博文</button>
+    <button class="r_choice2">D. 聖徳太子</button>
+  </div>
+
+<h3 id="r_question3">問題（数学）: 太陽の光を最も吸収しやすい色は？</h3>
+<div id="r_options3">
+  <button class="r_choice3">A.白 </button>
+  <button class="r_choice3">B.黄色 </button>
+  <button class="r_choice3">C.黒 </button>
+  <button class="r_choice3">D.赤 </button>
+</div>
+
+<h3 id="r_question4">問題（数学）: 5+5は？</h3>
+<div id="r_options4">
+<button class="r_choice4">A.10</button>
+<button class="r_choice4">B.25 </button>
+<button class="r_choice4">C.0 </button>
+<button class="r_choice4">D.1 </button>
+</div>
+
+<h3 id="r_question5">問題（数学）: cheeseは日本語で？</h3>
+<div id="r_options5">
+<button class="r_choice5">A.バター</button>
+<button class="r_choice5">B.チーズ</button>
+<button class="r_choice5">C.パン</button>
+<button class="r_choice5">D.ケーキ</button>
+</div>
+
+</div>
+
+<div class="result_box">
+<button class="btn_s">次の問題へ</button>
+</div>
+</section>
+<!-- 理科終わり -->
+
+<!-- 社会始まり -->
+<!-- 略称Sにて表記 -->
+<section id="content__wrapper_step5">
+  <h2>社会</h2>
+<h3 id="s_question1">問題（国語）: 「早急」の読みは？</h3>
+  <div id="s_options1">
+    <button class="s_choice1">A. そうきゅう</button>
+    <button class="s_choice1">B. はやいそ</button>
+    <button class="s_choice1">C. はやきゅう</button>
+    <button class="s_choice1">D. さっきゅう</button>
+  </div>
+
+  <h3 id="s_question2">問題（数学）: 江戸幕府を開いた人は？</h3>
+  <div id="s_options2">
+    <button class="s_choice2">A. 岸田文雄</button>
+    <button class="s_choice2">B. 徳川家康</button>
+    <button class="s_choice2">C. 伊藤博文</button>
+    <button class="s_choice2">D. 聖徳太子</button>
+  </div>
+
+<h3 id="s_question3">問題（数学）: 太陽の光を最も吸収しやすい色は？</h3>
+<div id="s_options3">
+  <button class="s_choice3">A.白 </button>
+  <button class="s_choice3">B.黄色 </button>
+  <button class="s_choice3">C.黒 </button>
+  <button class="s_choice3">D.赤 </button>
+</div>
+
+<h3 id="s_question4">問題（数学）: 5+5は？</h3>
+<div id="s_options4">
+<button class="s_choice4">A.10</button>
+<button class="s_choice4">B.25 </button>
+<button class="s_choice4">C.0 </button>
+<button class="s_choice4">D.1 </button>
+</div>
+
+<h3 id="s_question5">問題（数学）: cheeseは日本語で？</h3>
+<div id="s_options5">
+<button class="s_choice5">A.バター</button>
+<button class="s_choice5">B.チーズ</button>
+<button class="s_choice5">C.パン</button>
+<button class="s_choice5">D.ケーキ</button>
+</div>
+<button class="btn_result">採点結果</button>
+</div>
+</section>
+<!-- 社会終わり -->
+
+<!-- 結果発表 -->
+<section id="saiten_box">
+<p>国語</p><p id="j_result"></p>
+<p>数学</p><p id="m_result"></p>
+<p>英語</p><p id="e_result"></p>
+<p>理科</p><p id="r_result"></p>
+<p>社会</p><p id="s_result"></p>
+<p>合計</p><p id="result"></p>
+<canvas id="myChart"></canvas>
+</section>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="examination.js"></script>
+</body>
+</html>
